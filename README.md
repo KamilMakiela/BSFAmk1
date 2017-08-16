@@ -1,4 +1,4 @@
-# Bayesian Stochastic Frontier Analysis with Matlab
+# Bayesian Stochastic Frontier Analysis with MATLAB
 
 **Kamil Makieła** 
 
