@@ -16,7 +16,7 @@ switch rozklad
             [wyniki, pliki] = SimulationER1Alt(y, x, n, t, u, beta, iteracji, H, objetosc, spalone, restrykcje, mediana, priors);
         otherwise
             msgbox('Unknown model','Well this is embarrassing...','error');
-            wyniki = 'lipa';
+            wyniki = 'Ups';
     end
     case 2
     switch model
@@ -33,9 +33,9 @@ switch rozklad
             [wyniki, pliki] = SimulationHNAlt(y, x, n, t, u, beta, iteracji, H, objetosc, spalone, restrykcje, mediana, priors);
         otherwise
             msgbox('Unknown model','Well this is embarrassing...','error');
-            wyniki = 'lipa';
+            wyniki = 'Ups';
     end
-    case {5,6}
+    case {3,4}
     switch model
         case 1
             [wyniki, pliki] = SimulationVED(y, x, n, t, u, beta, iteracji, H, objetosc, spalone, restrykcje, mediana, priors);
@@ -50,12 +50,12 @@ switch rozklad
             [wyniki, pliki] = SimulationVED(y, x, n, t, u, beta, iteracji, H, objetosc, spalone, restrykcje, mediana, priors);
         otherwise
             msgbox('Unknown model','Well this is embarrassing...','error');
-            wyniki = 'lipa';
+            wyniki = 'Ups';
     end
-    case {9}
+    case {5}
         [wyniki, pliki] = SimulationProsty(y, x, n, t, u, beta, iteracji, H, objetosc, spalone, restrykcje, priors);
     
     otherwise 
         msgbox('Unknown model.');
-        wyniki = 'lipa';
+        wyniki = 'Ups';
 end
