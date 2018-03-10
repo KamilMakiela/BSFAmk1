@@ -27,14 +27,14 @@ while niesk == 1;
     %flaga = 0;
     
     %DLA ROZK£ADU REFERENCYJNEGO 
-    mi = par.xtrx\(x'*(y+u));
-    sigma = s*(chol(inv(x'*x))');
+    %mi = par.xtrx\(x'*(y+u));
+    %sigma = s*(chol(inv(x'*x))');
 
     
     %DLA ROZK£ADU W£AŒCIWEGO
-    %sigma2 = par.pr_diag/(par.pr_prec + par.xtrx/s2);
-    %mi = sigma2*(par.pr_precXex + x'*(y+u)./s2);
-    %sigma = chol(sigma2)';
+    sigma2 = par.pr_diag/(par.pr_prec + par.xtrx/s2);
+    mi = sigma2*(par.pr_precXex + x'*(y+u)./s2);
+    sigma = chol(sigma2)';
     
     if isnan(restr)
         beta_n = mi + sigma*randn(par.x2dim,1);
